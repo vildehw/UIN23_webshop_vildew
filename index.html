@@ -4,11 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEGO-DUDES SHOP</title> 
-    <link href="styleshop.css" type="stylesheet">
+    <title>LEGO-DUDES WEBSHOP</title> 
+    <link href="webshopstyle.css" type="text/css" rel="stylesheet">
 </head>
-<body>
-    
+<body> 
+    <div class="container">
+        <header>
+            <a href="index.html">
+                <img src="images/LD_logo.svg" alt="LEGO-DUDES"/>
+            </a> 
+            <figure id="cart" onClick="toggleCart()">
+                <span class="label">0</span> 
+                <img src="images/legocart.svg" alt="handlekurv"/>
+            </figure>
+        </header>  
+        <section id="cartview" class="hidden"> 
+            <h3>din handlevogn</h3> 
+            <ul>
+                <li>
+                    Du har ingen varer i handlevognen.
+                </li>
+            </ul> 
+            <p>Totalt kr. <span id="total">0</span>,-</p>
+        </section>
+        <nav>
+            <a href="city.html">City</a> 
+            <a class="active" href="ninjago.html">Ninjago</a> 
+            <a href="castle-knights.html">Castle and Knights</a> 
+            <a href="marine.pirates.html">Marine and Pirates</a> 
+            <a href="movie-characters.html">Movie characters</a>
+        </nav> 
+        <main>
+            <h2>Ninjago</h2> 
+            <article class="product-card">
+                <img src="images/PROD_dragon_zane.webp" alt="produktbilde av Zane"/> 
+                <a href="ninjago.html">Ninjago</a> 
+                <h3>Dragon Zane</h3> 
+                <span class="price">Kr. 89,-</span> 
+                <button onClick="addToCart('Dragon Zane', 89)">Legg i handlekurv</button>
+            </article> 
+            <article class="product-card">
+                <img src="images/PROD_lil_ninja.webp" alt="produktbilde av Zane"/> 
+                <a href="ninjago.html">Ninjago</a> 
+                <h3>Lil ninja</h3> 
+                <span class="price">Kr. 99,-</span> 
+                <button onClick="addToCart('Lil Ninja ', 99)">Legg i handlekurv</button>
+            </article> 
+            <article class="product-card">
+                <img src="images/PROD_master_wu.webp" alt="produktbilde av Zane"/> 
+                <a href="ninjago.html">Ninjago</a> 
+                <h3>Master Wu</h3> 
+                <span class="price">Kr. 109,-</span> 
+                <button onClick="addToCart('Master Wu ', 109)">Legg i handlekurv</button>
+            </article> 
+            <article class="product-card">
+                <img src="images/PROD_scuba_kai.webp" alt="produktbilde av Zane"/> 
+                <a href="ninjago.html">Ninjago</a> 
+                <h3>Dragon Zane</h3> 
+                <span class="price">Kr. 89,-</span> 
+                <button>Legg i handlekurv</button>
+            </article>
+        </main>
+    </div>
     <script src="shopscript.js"></script>
 </body>
 </html>
